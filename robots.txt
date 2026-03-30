@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://scalvora-masterpiece.netlify.app/sitemap.xml

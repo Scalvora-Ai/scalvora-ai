@@ -1,0 +1,13 @@
+# Scalvora Git Ignore
+.DS_Store
+node_modules/
+dist/
+build/
+.env
+.firebase/
+firebase-debug.log
+firebug.log
+.gemini/
+.agent/
+tmp/
+*.log
