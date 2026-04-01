@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap');
 
 :root {
     --primary: #00C2CB;
@@ -109,9 +109,7 @@ body.masterpiece-restored {
     color: #FFFFFF !important;
 }
 
-h1, h2, h3, h4, .logo, .nav-links a, .menu-toggle {
-    color: #FFFFFF !important;
-}
+h1, h2, h3, h4, .logo, .nav-links a, 
 
 p, .feature-text {
     color: #CBD5E1 !important;
@@ -373,41 +371,9 @@ span {
     z-index: 1100;
 }
 
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: var(--secondary);
-    font-size: 1.5rem;
-    cursor: pointer;
-    z-index: 1200;
-}
 
-@media (max-width: 968px) {
-    .menu-toggle {
-        display: block;
-        position: fixed;
-        right: 20px;
-        top: 20px;
-    }
 
-    .nav-links {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 100%;
-        height: 100vh;
-        background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 40px;
-        transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        z-index: 1000;
-    }
+
 
     .nav-links.active {
         right: 0;
@@ -447,14 +413,7 @@ span {
     transform: translateY(-2px);
 }
 
-.menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: var(--dark);
-    cursor: pointer;
-}
+
 
 /* Hero - Light Mode Force */
 .hero {
@@ -524,11 +483,7 @@ span {
     align-items: center !important;
 }
 
-@media (max-width: 968px) {
-    .nav-links {
-        display: none !important;
-        flex-direction: column !important;
-    }
+
     .nav-links.active {
         display: flex !important;
     }
@@ -1134,9 +1089,7 @@ spline-viewer {
         display: flex !important;
     }
     
-    .menu-toggle {
-        display: block !important;
-    }
+    
 }
 
 .footer-links ul {
@@ -1260,9 +1213,7 @@ spline-viewer {
 }
 
 /* Global Colors Reset */
-h1, h2, h3, h4, .logo, .nav-links a, .menu-toggle {
-    color: #FFFFFF !important;
-}
+h1, h2, h3, h4, .logo, .nav-links a, 
 
 p, .feature-text, .section-header p {
     color: #CBD5E1 !important;
@@ -1340,10 +1291,7 @@ p, .feature-text, .section-header p {
 }
 
 /* Mobile Polish */
-@media (max-width: 968px) {
-    .nav-links.active {
-        background: rgba(0, 0, 0, 0.98) !important;
-    }
+
     .nav-links.active li a {
         color: #FFFFFF !important;
     }
@@ -1442,54 +1390,9 @@ p, .feature-text, .section-header p {
 .footer-bottom { margin-top: 80px !important; padding-top: 40px !important; border-top: 1px solid rgba(255, 255, 255, 0.1) !important; text-align: center !important; color: rgba(255, 255, 255, 0.6) !important; font-size: 0.95rem !important; }
 
 /* FINAL MOBILE NAVIGATION ACTIVATION (V47) */
-.menu-toggle {
-    display: none;
-    background: transparent;
-    border: none;
-    color: var(--primary);
-    font-size: 2rem;
-    cursor: pointer;
-    transition: var(--transition);
-    padding: 10px;
-    z-index: 10001;
-    position: relative;
-}
 
-@media (max-width: 968px) {
-    .menu-toggle {
-        display: flex !important;
-        position: fixed !important;
-        top: 25px !important;
-        right: 25px !important;
-        width: 50px !important;
-        height: 50px !important;
-        align-items: center;
-        justify-content: center;
-        background: rgba(0, 0, 0, 0.5) !important;
-        backdrop-filter: blur(10px) !important;
-        border-radius: 12px !important;
-        border: 1px solid rgba(255, 255, 255, 0.1) !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-        z-index: 100001 !important;
-    }
-    
-    .nav-links {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 80%;
-        height: 100vh;
-        background: rgba(0, 0, 0, 0.95);
-        backdrop-filter: blur(20px);
-        flex-direction: column !important;
-        justify-content: center;
-        align-items: center;
-        gap: 40px !important;
-        transition: 0.5s cubic-bezier(0.85, 0, 0.15, 1);
-        z-index: 10000;
-        margin: 0 !important;
-    }
+
+
     
     .nav-links.active {
         right: 0;
@@ -1508,5 +1411,65 @@ p, .feature-text, .section-header p {
     .nav-actions {
         display: flex !important;
         align-items: center;
+    }
+}
+
+/* DEFINITIVE MOBILE NAVIGATION ACTIVATION (V48.1 - FINAL) */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    z-index: 100000;
+}
+
+@media (max-width: 968px) {
+    .menu-toggle {
+        display: flex !important;
+        position: fixed !important;
+        top: 20px !important;
+        right: 20px !important;
+        width: 44px !important;
+        height: 44px !important;
+        background: rgba(0, 0, 0, 0.8) !important;
+        backdrop-filter: blur(10px) !important;
+        border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        border-radius: 12px !important;
+        align-items: center !important;
+        justify-content: center !important;
+        color: #00d2ff !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    .nav-links {
+        position: fixed !important;
+        top: 0 !important;
+        right: -100% !important;
+        width: 100% !important;
+        height: 100vh !important;
+        background: #000000 !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 30px !important;
+        transition: 0.4s cubic-bezier(0.77, 0, 0.175, 1) !important;
+        z-index: 99999 !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    .nav-links.active {
+        right: 0 !important;
+    }
+    
+    .nav-links li a {
+        font-size: 1.8rem !important;
+        font-weight: 700 !important;
+        color: #FFFFFF !important;
+        text-transform: uppercase !important;
+    }
+    
+    .logo {
+        position: relative !important;
+        z-index: 100001 !important;
     }
 }
