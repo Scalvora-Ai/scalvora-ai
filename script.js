@@ -14,14 +14,18 @@ document.addEventListener('DOMContentLoaded', () => {
         lucide.createIcons();
     }
 
-    // Admin Visibility Logic for Leads
+    // Dual-Phase Theme Switching Logic (V49)
     const urlParams = new URLSearchParams(window.location.search);
+    const isAdmin = urlParams.get('admin') === 'true';
+    
+    if (isAdmin) {
+        document.body.classList.add('admin-theme');
+        console.log("Scalvora Cyber-Control Mode (V49) - Authorized");
+    }
+
+    // Admin Visibility Logic for Leads
     if (liveWidget) {
-        if (urlParams.get('admin') === 'true') {
-            liveWidget.style.display = 'flex';
-        } else {
-            liveWidget.style.display = 'none';
-        }
+        liveWidget.style.display = isAdmin ? 'flex' : 'none';
     }
 
     // Ambient Movement for 3D Scene

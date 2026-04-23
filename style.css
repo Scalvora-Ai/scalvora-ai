@@ -1,17 +1,32 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap');
 
 :root {
-    --primary: #00C2CB;
-    --primary-dark: #009DA5;
+    /* Public Theme (Neural Essentialism) */
+    --primary: #00D2FF;
+    --primary-dark: #3A7BD5;
     --secondary: #0B2136;
-    --bg-dark: #000000;
-    --text-white: #FFFFFF;
-    --text-gray: #CBD5E1;
-    --card-bg: rgba(255, 255, 255, 0.05);
-    --nav-bg: rgba(0, 0, 0, 0.8);
+    --bg-base: #F8F9FA; /* Cloud Dancer / Limestone Foundation */
+    --bg-master: #000000;
+    --text-main: #FFFFFF;
+    --text-muted: #CBD5E1;
+    --card-bg: rgba(255, 255, 255, 0.08);
+    --nav-bg: rgba(0, 0, 0, 0.85);
+    --accent-glow: rgba(0, 210, 255, 0.4);
+    --hero-bg: url('assets/public_hero_bg.png');
+    
     --transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-smooth: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
     --live-red: #ff4d4d;
+}
+
+body.admin-theme {
+    /* Admin Theme (Cyber-Control) */
+    --primary: #00FFC2; /* Tech Green */
+    --primary-dark: #00A58A;
+    --bg-master: #010409; /* Deep Space Navy */
+    --card-bg: rgba(0, 255, 194, 0.05);
+    --accent-glow: rgba(0, 255, 194, 0.3);
+    --hero-bg: url('assets/admin_dashboard_bg.png');
 }
 
 html {
@@ -27,18 +42,36 @@ html {
 
 /* Masterpiece High Contrast Restoration */
 body, html {
-    background: #000000 !important;
-    color: #ffffff;
+    background: var(--bg-master) !important;
+    color: var(--text-main);
     overflow-x: hidden;
     max-width: 100%;
+    transition: var(--transition-smooth);
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--hero-bg) center/cover no-repeat;
+    opacity: 0.15;
+    z-index: -1;
+    pointer-events: none;
+}
+
+body.admin-theme::before {
+    opacity: 0.3;
+}
+
+body.masterpiece-restored {
+    background: var(--bg-master) !important;
 }
 
 spline-viewer::part(logo) {
     display: none !important;
-}
-
-body.masterpiece-restored {
-    background: #000000 !important;
 }
 
 #spline-container {
@@ -372,22 +405,21 @@ span {
 }
 
 
-
-
-
+/* REPLACED V48.5 BRACKET */
+@media (max-width: 968px) {
     .nav-links.active {
         right: 0;
     }
+}
 
-    .nav-links a {
-        font-size: 2rem;
-        font-weight: 600;
-        letter-spacing: -0.022em;
-    }
+.nav-links a {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: -0.022em;
+}
 
-    .nav-cta {
-        display: none;
-    }
+.nav-cta {
+    display: none;
 }
 
 .btn-primary {
@@ -483,7 +515,7 @@ span {
     align-items: center !important;
 }
 
-
+@media (max-width: 968px) {
     .nav-links.active {
         display: flex !important;
     }
@@ -1290,8 +1322,7 @@ p, .feature-text, .section-header p {
     color: #FFFFFF !important;
 }
 
-/* Mobile Polish */
-
+@media (max-width: 968px) {
     .nav-links.active li a {
         color: #FFFFFF !important;
     }
@@ -1389,30 +1420,7 @@ p, .feature-text, .section-header p {
 .footer i { color: var(--primary) !important; margin-right: 15px !important; font-size: 1.2rem !important; }
 .footer-bottom { margin-top: 80px !important; padding-top: 40px !important; border-top: 1px solid rgba(255, 255, 255, 0.1) !important; text-align: center !important; color: rgba(255, 255, 255, 0.6) !important; font-size: 0.95rem !important; }
 
-/* FINAL MOBILE NAVIGATION ACTIVATION (V47) */
-
-
-
-    
-    .nav-links.active {
-        right: 0;
-    }
-    
-    .nav-links li {
-        margin: 0 !important;
-    }
-
-    .nav-links li a {
-        font-size: 2rem !important;
-        font-weight: 700 !important;
-        color: #FFFFFF !important;
-    }
-
-    .nav-actions {
-        display: flex !important;
-        align-items: center;
-    }
-}
+/* MOBILE NAVIGATION BLOCK (V48.1) */
 
 /* DEFINITIVE MOBILE NAVIGATION ACTIVATION (V48.1 - FINAL) */
 .menu-toggle {
