@@ -1,4 +1,4 @@
-
+﻿
 /* UNIVERSAL FLUID TYPOGRAPHY (V54) */
 h1 { font-size: clamp(2.5rem, 8vw, 6rem) !important; font-weight: 800 !important; line-height: 1.1 !important; margin-bottom: 30px !important; }
 h2 { font-size: clamp(2rem, 5vw, 4.5rem) !important; font-weight: 800 !important; line-height: 1.2 !important; margin-bottom: 25px !important; }
@@ -80,7 +80,7 @@ html {
 body, html {
     background: var(--bg-master) !important;
     color: var(--text-main);
-    overflow-x: hidden;
+    overflow-x: hidden; overflow-y: visible !important;
     max-width: 100%;
     transition: var(--transition-smooth);
 }
@@ -136,7 +136,7 @@ html {
 body, html {
     background: var(--bg-master) !important;
     color: var(--text-main);
-    overflow-x: hidden;
+    overflow-x: hidden; overflow-y: visible !important;
     max-width: 100%;
     transition: var(--transition-smooth);
 }
@@ -1367,8 +1367,8 @@ p, .feature-text, .section-header
 
 .about-image-wrapper img, .founder-img, .portfolio-img {
     width: 100%;
-    max-height: 65vh; /* Professional desktop scaling */
-    max-width: 600px;
+    max-height: 50vh !important; /* Professional desktop scaling */
+    max-width: 480px !important;
     margin: 0 auto;
     border-radius: 40px;
     object-fit: cover;
