@@ -100,9 +100,9 @@ document.addEventListener('DOMContentLoaded', () => {
             window.requestAnimationFrame(() => {
                 // Navbar visual state
                 if (lastScrollY > 50) {
-                    navbar.classList.add('navbar-scrolled');
+                    navbar.classList.add('scrolled');
                 } else {
-                    navbar.classList.remove('navbar-scrolled');
+                    navbar.classList.remove('scrolled');
                 }
                 ticking = false;
             });

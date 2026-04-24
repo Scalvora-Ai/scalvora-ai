@@ -1,4 +1,4 @@
-﻿
+
 /* UNIVERSAL FLUID TYPOGRAPHY (V54) */
 h1 { font-size: clamp(2.5rem, 8vw, 6rem) !important; font-weight: 800 !important; line-height: 1.1 !important; margin-bottom: 30px !important; }
 h2 { font-size: clamp(2rem, 5vw, 4.5rem) !important; font-weight: 800 !important; line-height: 1.2 !important; margin-bottom: 25px !important; }
@@ -1422,5 +1422,254 @@ p, .feature-text, .section-header
     .logo {
         position: relative !important;
         z-index: 100001 !important;
+    }
+}
+
+/* ============================================================
+   MASTERPIECE DEFINITIVE RESPONSIVE OVERHAUL (V60)
+   Focused on: Premium Aesthetics, Fluid Scale, & Mobile Perfection
+   ============================================================ */
+
+:root {
+    --container-padding: clamp(1.5rem, 5vw, 4rem);
+    --section-spacing: clamp(5rem, 12vh, 10rem);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-bg: rgba(10, 10, 10, 0.6);
+}
+
+/* 1. Fluid Typography Refinement */
+h1 { font-size: clamp(2.5rem, 10vw, 6rem) !important; letter-spacing: -0.03em !important; }
+h2 { font-size: clamp(2rem, 7vw, 4.5rem) !important; letter-spacing: -0.02em !important; }
+h3 { font-size: clamp(1.5rem, 4vw, 2.2rem) !important; }
+p { font-size: clamp(1rem, 1.2vw, 1.2rem) !important; color: #CBD5E1 !important; opacity: 0.9; }
+
+/* 2. Container & Section Harmony */
+.container {
+    width: 100% !important;
+    max-width: 1400px !important;
+    margin: 0 auto !important;
+    padding: 0 var(--container-padding) !important;
+}
+
+.section {
+    padding: var(--section-spacing) 0 !important;
+}
+
+/* 3. Spline Background Mobile Optimization */
+@media (max-width: 768px) {
+    #spline-container {
+        opacity: 0.4 !important; /* Dim background for readability */
+        filter: blur(5px);
+    }
+    .logo-shield {
+        display: none !important;
+    }
+}
+
+/* 4. Glassmorphism 2.0 - Premium Cards */
+.service-card, .about-card, .feat-card, .process-card {
+    background: var(--glass-bg) !important;
+    backdrop-filter: blur(25px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(25px) saturate(180%) !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: 32px !important;
+    padding: 3rem !important;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(255, 255, 255, 0.05) !important;
+    transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1) !important;
+}
+
+.service-card:hover {
+    transform: translateY(-10px) scale(1.02) !important;
+    border-color: var(--primary) !important;
+    background: rgba(10, 10, 10, 0.8) !important;
+}
+
+/* 5. About Content & Features Grid Fixes */
+.about-content {
+    gap: clamp(2rem, 10vw, 6rem) !important;
+}
+
+.feat-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    padding: 12px 20px !important;
+    border-radius: 12px !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    font-weight: 600 !important;
+    color: #FFFFFF !important;
+    font-size: 0.95rem !important;
+}
+
+.feat-item i {
+    color: var(--primary) !important;
+    width: 20px;
+    height: 20px;
+}
+
+/* 6. Process Section Enhancements */
+.step-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: var(--primary);
+    color: #000;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.process-icon {
+    display: block;
+    width: 48px;
+    height: 48px;
+    color: var(--primary);
+    margin-bottom: 24px;
+}
+
+/* 7. Navbar & Mobile Menu Perfection */
+.navbar {
+    padding: 20px 0 !important;
+}
+
+@media (max-width: 968px) {
+    .navbar {
+        padding: 15px 0 !important;
+    }
+    
+    .logo {
+        font-size: 1.5rem !important;
+    }
+
+    .nav-links {
+        padding: 4rem 2rem !important;
+    }
+
+    .nav-links li a {
+        font-size: 2.5rem !important; /* Larger for better touch */
+        letter-spacing: -0.05em !important;
+    }
+}
+
+/* 8. Fix for overlapping images and text on mobile */
+@media (max-width: 968px) {
+    .about-image-wrapper {
+        margin-bottom: 2rem !important;
+    }
+    
+    .about-text-narrative {
+        text-align: left !important; /* Better for readability than center */
+    }
+    
+    .hero-content {
+        padding-top: 140px !important;
+        padding-bottom: 60px !important;
+    }
+}
+
+/* 9. Premium Badge Styling */
+.badge {
+    background: rgba(0, 210, 255, 0.15) !important;
+    color: var(--primary) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(0, 210, 255, 0.2) !important;
+    font-weight: 700 !important;
+    padding: 8px 20px !important;
+}
+
+/* 10. Scrollbar Styling for a Masterpiece Feel */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(var(--primary), var(--primary-dark));
+    border-radius: 10px;
+}
+
+/* Final Polish for Services Grid */
+.services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+    gap: 2rem !important;
+}
+
+@media (max-width: 480px) {
+    .services-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .service-card {
+        padding: 2rem !important;
+    }
+}
+
+/* ============================================================
+   FOOTER CLARITY RESTORATION (V61)
+   Ensuring high-contrast white text for all footer elements.
+   ============================================================ */
+
+.footer {
+    background: #000000 !important;
+    color: #FFFFFF !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.footer h4, 
+.footer p, 
+.footer li, 
+.footer .footer-contact, 
+.footer-bottom p {
+    color: #FFFFFF !important;
+    opacity: 1 !important;
+}
+
+.footer a {
+    color: #FFFFFF !important;
+    opacity: 0.8;
+    transition: all 0.3s ease !important;
+    text-decoration: none !important;
+}
+
+.footer a:hover {
+    color: var(--primary) !important;
+    opacity: 1;
+    padding-left: 5px;
+}
+
+.footer .logo {
+    color: #FFFFFF !important;
+}
+
+.footer .logo span {
+    color: var(--primary) !important;
+}
+
+.footer i {
+    color: var(--primary) !important;
+    opacity: 1 !important;
+}
+
+/* Ensure the footer is visible on all devices */
+@media (max-width: 768px) {
+    .footer {
+        padding: 60px 0 40px !important;
+        text-align: center;
+    }
+    
+    .footer-grid {
+        gap: 40px !important;
+    }
+    
+    .footer-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 }
