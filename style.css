@@ -1,11 +1,45 @@
 ﻿
-/* UNIVERSAL FLUID TYPOGRAPHY (V54) */
-h1 { font-size: clamp(2.5rem, 8vw, 6rem) !important; font-weight: 800 !important; line-height: 1.1 !important; margin-bottom: 30px !important; }
-h2 { font-size: clamp(2rem, 5vw, 4.5rem) !important; font-weight: 800 !important; line-height: 1.2 !important; margin-bottom: 25px !important; }
-h3 { font-size: clamp(1.4rem, 3vw, 2rem) !important; font-weight: 700 !important; margin-bottom: 15px !important; }
-p { font-size: clamp(1rem, 1.5vw, 1.25rem) !important; line-height: 1.7 !important; margin-bottom: 25px !important; }
+/* ============================================================
+   SCALVORA-AI GLOBAL MASTERPIECE (V57)
+   Universal Masterpiece Precision: Responsive Excellence
+   ============================================================ */
 
-/* UNIVERSAL SECTION RESPONSIVENESS (V54) */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap");
+
+:root {
+    --primary: #00D2FF;
+    --primary-dark: #3A7BD5;
+    --secondary: #0B2136;
+    --bg-base: #F8F9FA;
+    --bg-master: #000000;
+    --text-main: #FFFFFF;
+    --text-muted: #CBD5E1;
+    --card-bg: rgba(255, 255, 255, 0.08);
+    --nav-bg: rgba(0, 0, 0, 0.85);
+    --accent-glow: rgba(0, 210, 255, 0.4);
+    --hero-bg: url("assets/public_hero_bg.png");
+    
+    --transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+    --live-red: #ff4d4d;
+}
+
+body.admin-theme {
+    --primary: #00FFC2;
+    --primary-dark: #00A58A;
+    --bg-master: #010409;
+    --card-bg: rgba(0, 255, 194, 0.05);
+    --accent-glow: rgba(0, 255, 194, 0.3);
+    --hero-bg: url("assets/admin_dashboard_bg.png");
+}
+
+/* 1. UNIVERSAL FLUID TYPOGRAPHY (Masterpiece Precision) */
+h1 { font-size: clamp(1.8rem, 5vw, 3.5rem) !important; font-weight: 800 !important; line-height: 1.1 !important; margin-bottom: 25px !important; color: #FFFFFF !important; }
+h2 { font-size: clamp(1.5rem, 4vw, 2.8rem) !important; font-weight: 800 !important; line-height: 1.2 !important; margin-bottom: 20px !important; color: #FFFFFF !important; }
+h3 { font-size: clamp(1.2rem, 3vw, 1.8rem) !important; font-weight: 700 !important; margin-bottom: 15px !important; }
+p { font-size: clamp(0.9rem, 1.2vw, 1.05rem) !important; line-height: 1.7 !important; margin-bottom: 20px !important; color: #CBD5E1 !important; }
+
+/* 2. UNIVERSAL SECTION RESPONSIVENESS */
 .section-overlay {
     min-height: 100vh;
     height: auto;
@@ -13,16 +47,28 @@ p { font-size: clamp(1rem, 1.5vw, 1.25rem) !important; line-height: 1.7 !importa
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: clamp(60px, 10vh, 140px) 0 !important; /* Balanced padding for all views */
+    padding: clamp(60px, 10vh, 140px) 0 !important;
     position: relative;
     z-index: 10;
 }
 
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+    position: relative;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr !important;
+    gap: clamp(2rem, 8vw, 100px) !important;
+    align-items: center;
+}
+
 @media (max-width: 1024px) {
-    .grid-2 {
-        grid-template-columns: 1fr 1fr !important;
-        gap: 50px !important;
-    }
+    .grid-2 { gap: 50px !important; }
     .container { padding: 0 40px !important; }
 }
 
@@ -34,139 +80,41 @@ p { font-size: clamp(1rem, 1.5vw, 1.25rem) !important; line-height: 1.7 !importa
     }
     .container { padding: 0 25px !important; }
 }
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap');
 
-:root {
-    /* Public Theme (Neural Essentialism) */
-    --primary: #00D2FF;
-    --primary-dark: #3A7BD5;
-    --secondary: #0B2136;
-    --bg-base: #F8F9FA; /* Cloud Dancer / Limestone Foundation */
-    --bg-master: #000000;
-    --text-main: #FFFFFF;
-    --text-muted: #CBD5E1;
-    --card-bg: rgba(255, 255, 255, 0.08);
-    --nav-bg: rgba(0, 0, 0, 0.85);
-    --accent-glow: rgba(0, 210, 255, 0.4);
-    --hero-bg: url('assets/public_hero_bg.png');
-    
-    --transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-smooth: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
-    --live-red: #ff4d4d;
-}
+/* 3. CORE GLOBAL STYLES */
+html { scroll-behavior: smooth; }
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: "Inter", sans-serif; }
 
-body.admin-theme {
-    /* Admin Theme (Cyber-Control) */
-    --primary: #00FFC2; /* Tech Green */
-    --primary-dark: #00A58A;
-    --bg-master: #010409; /* Deep Space Navy */
-    --card-bg: rgba(0, 255, 194, 0.05);
-    --accent-glow: rgba(0, 255, 194, 0.3);
-    --hero-bg: url('assets/admin_dashboard_bg.png');
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-}
-
-/* Masterpiece High Contrast Restoration */
 body, html {
     background: var(--bg-master) !important;
     color: var(--text-main);
-    overflow-x: hidden; overflow-y: visible !important;
+    overflow-x: hidden;
+    overflow-y: visible !important;
     max-width: 100%;
     transition: var(--transition-smooth);
 }
 
 body::before {
-    content: '';
+    content: "";
     position: fixed;
-    top: 0;
-    left: 0;
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap');
-
-:root {
-    /* Public Theme (Neural Essentialism) */
-    --primary: #00D2FF;
-    --primary-dark: #3A7BD5;
-    --secondary: #0B2136;
-    --bg-base: #F8F9FA; /* Cloud Dancer / Limestone Foundation */
-    --bg-master: #000000;
-    --text-main: #FFFFFF;
-    --text-muted: #CBD5E1;
-    --card-bg: rgba(255, 255, 255, 0.08);
-    --nav-bg: rgba(0, 0, 0, 0.85);
-    --accent-glow: rgba(0, 210, 255, 0.4);
-    --hero-bg: url('assets/public_hero_bg.png');
-    
-    --transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-smooth: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
-    --live-red: #ff4d4d;
-}
-
-body.admin-theme {
-    /* Admin Theme (Cyber-Control) */
-    --primary: #00FFC2; /* Tech Green */
-    --primary-dark: #00A58A;
-    --bg-master: #010409; /* Deep Space Navy */
-    --card-bg: rgba(0, 255, 194, 0.05);
-    --accent-glow: rgba(0, 255, 194, 0.3);
-    --hero-bg: url('assets/admin_dashboard_bg.png');
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-}
-
-/* Masterpiece High Contrast Restoration */
-body, html {
-    background: var(--bg-master) !important;
-    color: var(--text-main);
-    overflow-x: hidden; overflow-y: visible !important;
-    max-width: 100%;
-    transition: var(--transition-smooth);
-}
-
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: 0; left: 0; width: 100%; height: 100%;
     background: var(--hero-bg) center/cover no-repeat;
     opacity: 0.15;
     z-index: -1;
     pointer-events: none;
-}body.admin-theme::before {
-    opacity: 0.3;
 }
 
-body.masterpiece-restored {
-    background: var(--bg-master) !important;
-}
-
-spline-viewer::part(logo) {
-    display: none !important;
-}
+body.admin-theme::before { opacity: 0.3; }
 
 #spline-container {
     position: fixed;
-    top: 0;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: -1;
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+spline-viewer::part(logo) { display: none !important; }
     left: 0;
     width: 100%;
     height: 100%;
