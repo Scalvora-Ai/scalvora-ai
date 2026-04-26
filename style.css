@@ -7,8 +7,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap");
 
 :root {
-    --primary: #00D2FF;
-    --primary-dark: #3A7BD5;
+    --primary: #00f3ff;
+    --primary-dark: #0088ff;
     --secondary: #0B2136;
     --bg-base: #F8F9FA;
     --bg-master: #000000;
@@ -16,7 +16,8 @@
     --text-muted: #CBD5E1;
     --card-bg: rgba(255, 255, 255, 0.08);
     --nav-bg: rgba(0, 0, 0, 0.85);
-    --accent-glow: rgba(0, 210, 255, 0.4);
+    --accent-glow: rgba(0, 243, 255, 0.4);
+    --tech-glow: rgba(0, 243, 255, 0.3);
     --hero-bg: url("assets/public_hero_bg.png");
     
     --transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -94,13 +95,23 @@ body, html {
     transition: var(--transition-smooth);
 }
 
+body::after {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: linear-gradient(rgba(0, 243, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 243, 255, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    z-index: -1;
+    pointer-events: none;
+}
+
 body::before {
     content: "";
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
     background: var(--hero-bg) center/cover no-repeat;
-    opacity: 0.15;
-    z-index: -1;
+    opacity: 0.1;
+    z-index: -2;
     pointer-events: none;
 }
 
@@ -110,7 +121,7 @@ body.admin-theme::before { opacity: 0.3; }
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
     z-index: -1;
-    opacity: 0.8;
+    opacity: 0.6;
     pointer-events: none;
 }
 
@@ -1657,4 +1668,23 @@ p { font-size: clamp(1rem, 1.2vw, 1.2rem) !important; color: #CBD5E1 !important;
         align-items: center;
         gap: 10px;
     }
+}
+/* 11. Techie Form Mastery (V59) */
+input, select, textarea {
+    width: 100%;
+    padding: 18px 25px !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(0, 243, 255, 0.1) !important;
+    border-radius: 16px !important;
+    color: #FFFFFF !important;
+    font-size: 1rem !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    margin-bottom: 15px;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none !important;
+    border-color: var(--primary) !important;
+    background: rgba(0, 243, 255, 0.05) !important;
+    box-shadow: 0 0 20px var(--tech-glow) !important;
 }
